@@ -5,6 +5,10 @@ const cors = require('cors');
 const app = express();
 
 app.use(express.static('public'));  // Sirve los HTML automáticamente
+// Redirigir raíz a login
+app.get('/', (req, res) => {
+  res.redirect('/login.html');
+});
 app.use(cors());
 app.use(express.json());
 
