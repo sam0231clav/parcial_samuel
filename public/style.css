@@ -1,119 +1,167 @@
+/* ESTILO BASE */
 body{
     font-family: "Segoe UI", Arial, sans-serif;
-    background: linear-gradient(135deg,#eef2f7,#dbe3f0);
+    background: linear-gradient(135deg,#f0f4ff,#e6ecf7);
     margin:0;
-    padding:40px;
-    max-width:1000px;
+    padding:20px;
+    max-width:1200px;
     margin:auto;
+    color:#2c3e50;
 }
 
 /* TITULOS */
-
 h1,h2{
     text-align:center;
-    color:#2c3e50;
+    color:#1a2a40;
     margin-bottom:20px;
     letter-spacing:1px;
+    font-weight:600;
+    text-shadow:0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* CONTENEDORES */
-
 .container{
     background:white;
     padding:30px;
-    border-radius:10px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    transition:transform 0.3s ease;
+}
+.container:hover{
+    transform:translateY(-3px);
 }
 
 /* INPUTS */
-
 input,select{
     width:100%;
     padding:12px;
     margin:8px 0;
-    border-radius:6px;
+    border-radius:8px;
     border:1px solid #ccc;
     font-size:15px;
     transition:0.3s;
 }
-
 input:focus,select:focus{
-    border-color:#007bff;
+    border-color:#0066ff;
     outline:none;
-    box-shadow:0 0 5px rgba(0,123,255,0.3);
+    box-shadow:0 0 8px rgba(0,102,255,0.3);
 }
 
 /* BOTONES */
-
 button{
-    background:#007bff;
+    background:linear-gradient(135deg,#0066ff,#004bb3);
     color:white;
     border:none;
-    padding:12px 22px;
-    border-radius:6px;
+    padding:12px 24px;
+    border-radius:8px;
     font-size:15px;
     cursor:pointer;
     transition:0.3s;
     margin-top:10px;
+    font-weight:600;
 }
-
 button:hover{
-    background:#0056b3;
+    background:linear-gradient(135deg,#004bb3,#003580);
+    transform:scale(1.05);
 }
 
 /* TABLAS */
-
 table{
     width:100%;
     border-collapse:collapse;
     margin-top:25px;
     background:white;
-    border-radius:8px;
+    border-radius:10px;
     overflow:hidden;
-    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
 }
-
 th{
-    background:#34495e;
+    background:#1a2a40;
     color:white;
     text-transform:uppercase;
     font-size:14px;
     padding:14px;
+    letter-spacing:0.5px;
 }
-
 td{
     padding:12px;
     border-bottom:1px solid #eee;
 }
-
 tr:hover{
-    background:#f5f8fc;
+    background:#f0f6ff;
 }
 
 /* LISTAS */
-
 ul{
     list-style:none;
     padding:0;
 }
-
 li{
     background:white;
     padding:16px;
     margin:12px 0;
-    border-radius:8px;
-    border-left:5px solid #007bff;
-    box-shadow:0 3px 10px rgba(0,0,0,0.06);
+    border-radius:10px;
+    border-left:5px solid #0066ff;
+    box-shadow:0 4px 12px rgba(0,0,0,0.06);
+    transition:0.3s;
+}
+li:hover{
+    transform:translateX(5px);
 }
 
 /* LINKS MENU */
-
 a{
     text-decoration:none;
-    color:#007bff;
+    color:#0066ff;
     font-weight:600;
+    transition:0.3s;
 }
-
 a:hover{
     text-decoration:underline;
+    color:#004bb3;
+}
+
+/* 📱 MEDIA QUERIES RESPONSIVE */
+
+/* Tablets */
+@media (max-width: 992px){
+    body{
+        padding:15px;
+    }
+    .container{
+        padding:20px;
+    }
+    h1,h2{
+        font-size:1.6rem;
+    }
+    table, th, td{
+        font-size:14px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 600px){
+    body{
+        padding:10px;
+    }
+    h1,h2{
+        font-size:1.4rem;
+    }
+    .container{
+        padding:15px;
+    }
+    input,select,button{
+        font-size:14px;
+        padding:10px;
+    }
+    table{
+        font-size:13px;
+    }
+    th,td{
+        padding:10px;
+    }
+    li{
+        padding:12px;
+        font-size:14px;
+    }
 }

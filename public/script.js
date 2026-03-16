@@ -89,8 +89,8 @@ async function cargar() {
         <td>${e.departamento}</td>
         <td>${e.cargo}</td>
         <td>
-          <button onclick="editar(${e.id})">✏️ Editar</button>
-          <button onclick="eliminar(${e.id})">🗑️ Eliminar</button>
+          <button onclick="editar(${e.id})"> Editar</button>
+          <button onclick="eliminar(${e.id})"> Eliminar</button>
         </td>
       </tr>`;
   });
