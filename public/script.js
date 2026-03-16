@@ -1,6 +1,5 @@
 const API = ''; // vacío porque ahora todo está en el mismo servidor
 
-
 // ====================== LOGIN ======================
 async function login() {
   const usuario = document.getElementById("usuario").value;
