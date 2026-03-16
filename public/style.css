@@ -1,0 +1,119 @@
+body{
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg,#eef2f7,#dbe3f0);
+    margin:0;
+    padding:40px;
+    max-width:1000px;
+    margin:auto;
+}
+
+/* TITULOS */
+
+h1,h2{
+    text-align:center;
+    color:#2c3e50;
+    margin-bottom:20px;
+    letter-spacing:1px;
+}
+
+/* CONTENEDORES */
+
+.container{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* INPUTS */
+
+input,select{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:15px;
+    transition:0.3s;
+}
+
+input:focus,select:focus{
+    border-color:#007bff;
+    outline:none;
+    box-shadow:0 0 5px rgba(0,123,255,0.3);
+}
+
+/* BOTONES */
+
+button{
+    background:#007bff;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:6px;
+    font-size:15px;
+    cursor:pointer;
+    transition:0.3s;
+    margin-top:10px;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+/* TABLAS */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:25px;
+    background:white;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+th{
+    background:#34495e;
+    color:white;
+    text-transform:uppercase;
+    font-size:14px;
+    padding:14px;
+}
+
+td{
+    padding:12px;
+    border-bottom:1px solid #eee;
+}
+
+tr:hover{
+    background:#f5f8fc;
+}
+
+/* LISTAS */
+
+ul{
+    list-style:none;
+    padding:0;
+}
+
+li{
+    background:white;
+    padding:16px;
+    margin:12px 0;
+    border-radius:8px;
+    border-left:5px solid #007bff;
+    box-shadow:0 3px 10px rgba(0,0,0,0.06);
+}
+
+/* LINKS MENU */
+
+a{
+    text-decoration:none;
+    color:#007bff;
+    font-weight:600;
+}
+
+a:hover{
+    text-decoration:underline;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrar Empleado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="checkLogin(); cargarDepartamentos(); cargarCargos()">
+  <h2> Registrar Nuevo Empleado</h2>
+  
+  <input id="nombre" placeholder="Nombre">
+  <input id="apellido" placeholder="Apellido">
+  <input id="salario" type="number" placeholder="Salario">
+  
+  <select id="id_departamento"></select>
+  <select id="id_cargo"></select>
+  
+  <button onclick="agregar()">Agregar Empleado</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
