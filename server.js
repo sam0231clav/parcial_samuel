@@ -57,6 +57,7 @@ app.post('/register', async (req, res) => {
     res.status(500).json({ success: false, error: error.message });
   }
 });
+ 
 
 // DEPARTAMENTOS y CARGOS (para selects dinámicos)
 app.get('/departamentos', async (req, res) => {

@@ -1,5 +1,13 @@
 const API = ''; // vacío porque ahora todo está en el mismo servidor
 
+const pool = require('./db');
+
+async function getUsers() {
+  const res = await pool.query('SELECT * FROM users');
+  console.log(res.rows);
+}
+
+getUsers();
 // ====================== LOGIN ======================
 async function login() {
   const usuario = document.getElementById("usuario").value;
