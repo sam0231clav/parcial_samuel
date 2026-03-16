@@ -1,6 +1,7 @@
 const express = require('express');
 const pool = require('./db');
 const cors = require('cors');
+const path = require("path");
 
 const app = express();
 pool.connect()
@@ -103,6 +104,4 @@ app.delete('/empleados/:id', async (req, res) => {
   }
 });
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log(`Servidor corriendo en puerto ${process.env.PORT || 3000}`);
-});
+module.exports = app;
