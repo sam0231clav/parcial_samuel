@@ -3,6 +3,9 @@ const pool = require('./db');
 const cors = require('cors');
 
 const app = express();
+pool.connect()
+.then(() => console.log("Conectado a la base de datos"))
+.catch(err => console.error("Error de conexión", err));
 const PORT = process.env.PORT || 3000;
 app.use(express.static('public'));  // Sirve los HTML automáticamente
 // Redirigir raíz a login
