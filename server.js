@@ -3,7 +3,7 @@ const pool = require('./db');
 const cors = require('cors');
 
 const app = express();
-
+const PORT = process.env.PORT || 3000;
 app.use(express.static('public'));  // Sirve los HTML automáticamente
 // Redirigir raíz a login
 app.get('/', (req, res) => {
