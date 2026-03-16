@@ -31,6 +31,33 @@ app.post('/login', async (req, res) => {
   }
 });
 
+// REGISTRO DE USUARIO
+app.post('/register', async (req, res) => {
+  try {
+    const { usuario, password } = req.body;
+
+    const existe = await pool.query(
+      "SELECT * FROM usuarios WHERE usuario=$1",
+      [usuario]
+    );
+
+    if (existe.rows.length > 0) {
+      return res.json({ success: false, message: "El usuario ya existe" });
+    }
+
+    await pool.query(
+      "INSERT INTO usuarios(usuario,password) VALUES($1,$2)",
+      [usuario, password]
+    );
+
+    res.json({ success: true, message: "Usuario creado correctamente" });
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
+
 // DEPARTAMENTOS y CARGOS (para selects dinámicos)
 app.get('/departamentos', async (req, res) => {
   try {
